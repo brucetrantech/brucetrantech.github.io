@@ -5,6 +5,8 @@ const theme = {
     dark_blue: '#090F4E',
     gray: '#63657E',
     white: '#ffffff',
+    light_blue: '#F8FAFF',
+    border: '#f5f6fa',
   },
   radius: {
     sm: 6,
@@ -12,6 +14,7 @@ const theme = {
     lg: 10,
     xl: 12,
     xxl: 14,
+    input: 50,
   },
 };
 

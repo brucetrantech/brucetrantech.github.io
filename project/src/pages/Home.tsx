@@ -1,5 +1,10 @@
-import { Header } from '../core/container';
+import { DiscoverPricing, Header } from '../core/container';
 
 export default function Home() {
-  return <Header />;
+  return (
+    <>
+      <Header />
+      <DiscoverPricing />
+    </>
+  );
 }

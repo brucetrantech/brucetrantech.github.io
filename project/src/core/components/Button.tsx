@@ -2,22 +2,36 @@ import React from 'react';
 import styled from 'styled-components';
 import theme from '../theme';
 
+type Radius = 'sm' | 'md' | 'lg' | 'xl' | 'xxl' | 'input' | number;
+
 type ButtonProps = {
   color?: string;
   bg?: string;
-  radius?: number;
+  radius?: Radius;
   padding?: string;
   fontSize?: number;
   fontWeight?: number;
+  breakpoint?: number;
+  small?: {
+    radius?: Radius;
+    padding?: string;
+    fontSize?: number;
+    fontWeight?: number;
+  };
 } & React.HTMLAttributes<HTMLButtonElement>;
 
 interface StyleBtnProps {
   color: string;
   bg: string;
-  radius: number;
+  radius: Radius;
   padding: string;
   fontSize: number;
   fontWeight: number;
+  breakpoint?: number;
+  smallRadius?: Radius;
+  smallPadding?: string;
+  smallFontSize?: number;
+  smallFontWeight?: number;
 }
 
 export default function Button({
@@ -27,6 +41,8 @@ export default function Button({
   padding = '8px 12px',
   fontSize = 14,
   fontWeight = 500,
+  breakpoint = 768,
+  small = {},
   ...props
 }: ButtonProps) {
   return (
@@ -37,6 +53,11 @@ export default function Button({
       padding={padding}
       fontSize={fontSize}
       fontWeight={fontWeight}
+      breakpoint={breakpoint}
+      smallRadius={small?.radius}
+      smallPadding={small?.padding}
+      smallFontSize={small?.fontSize}
+      smallFontWeight={small?.fontWeight}
       {...props}
     >
       {props.children}
@@ -47,7 +68,7 @@ export default function Button({
 const StyleBtn = styled.button<StyleBtnProps>`
   outline: none;
   border: none;
-  border-radius: ${props => `${props.radius}px`};
+  border-radius: ${props => `${props.theme.radius?.[props.radius] || props.radius}px`};
   cursor: pointer;
   padding: ${props => props.padding};
   color: ${props => props.theme.colors?.[props.color] || props.color};
@@ -59,4 +80,15 @@ const StyleBtn = styled.button<StyleBtnProps>`
   &:hover {
     filter: brightness(88%);
   }
+
+  ${props =>
+    props.breakpoint &&
+    `
+    @media screen and (max-width: ${props.breakpoint}px) {
+      padding: ${props.smallPadding};
+      border-radius: ${props.smallRadius};
+      font-weight: ${props.smallFontWeight};
+      font-size: ${props.smallFontSize}px;
+    }
+  `}
 `;
