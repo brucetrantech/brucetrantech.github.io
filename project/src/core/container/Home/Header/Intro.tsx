@@ -40,7 +40,7 @@ const Container = styled.div`
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  @media screen and (width <= 768px) {
+  @media screen and (max-width: 768px) {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
     -ms-flex-flow: row wrap;
@@ -55,11 +55,11 @@ const Content = styled.div`
   width: 40vw;
   margin-block: 70px;
 
-  @media screen and (width <= 992px) {
+  @media screen and (max-width: 992px) {
     margin-block: 30px;
   }
 
-  @media screen and (width <= 768px) {
+  @media screen and (max-width: 768px) {
     -webkit-box-ordinal-group: 3;
     -ms-flex-order: 2;
     order: 2;
@@ -77,19 +77,19 @@ const Title = styled.h1`
   line-height: 120%;
   margin-block: 20px;
 
-  @media screen and (width <= 1440px) {
+  @media screen and (max-width: 1440px) {
     font-size: 40px;
   }
 
-  @media screen and (width <= 1200px) {
+  @media screen and (max-width: 1200px) {
     font-size: 36px;
   }
 
-  @media screen and (width <= 992px) {
+  @media screen and (max-width: 992px) {
     font-size: 32px;
   }
 
-  @media screen and (width <= 768px) {
+  @media screen and (max-width: 768px) {
     font-size: 20px;
     padding-inline: 20px;
   }
@@ -103,18 +103,18 @@ const SubTitle = styled.h3`
   color: ${props => props.theme.colors.gray};
   margin-block: 0 20px;
 
-  @media screen and (width <= 1200px) {
+  @media screen and (max-width: 1200px) {
     font-size: 14px;
   }
 
-  @media screen and (width <= 768px) {
+  @media screen and (max-width: 768px) {
     font-size: 12px;
   }
 `;
 
 const ImgContainer = styled.div`
   width: 50vw;
-  @media screen and (width <= 768px) {
+  @media screen and (max-width: 768px) {
     -webkit-box-ordinal-group: 2;
     -ms-flex-order: 1;
     order: 1;

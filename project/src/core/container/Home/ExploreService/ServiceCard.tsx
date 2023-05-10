@@ -31,16 +31,16 @@ const Card = styled.div`
   width: 25vw;
   gap: 13px;
 
-  @media screen and (width <= 1200px) {
+  @media screen and (max-width: 1200px) {
     width: 30vw;
     padding: 20px 30px;
   }
 
-  @media screen and (width <= 992px) {
+  @media screen and (max-width: 992px) {
     width: 32vw;
   }
 
-  @media screen and (width <= 768px) {
+  @media screen and (max-width: 768px) {
     width: 100%;
     margin-block: 4px;
     padding: 12px 20px;
@@ -48,7 +48,7 @@ const Card = styled.div`
 `;
 
 const Img = styled.img`
-  @media screen and (width <= 768px) {
+  @media screen and (max-width: 768px) {
     width: 48px;
     height: 48px;
   }
@@ -59,7 +59,7 @@ const Content = styled.h6`
   font-weight: 400;
   color: #818195;
   margin-block: 0;
-  @media screen and (width <= 768px) {
+  @media screen and (max-width: 768px) {
     font-size: 14px;
   }
 `;

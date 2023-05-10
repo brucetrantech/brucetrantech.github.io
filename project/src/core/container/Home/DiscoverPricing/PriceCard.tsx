@@ -30,7 +30,7 @@ const Card = styled.li`
   text-align: left;
   width: 280px;
   background-color: white;
-  @media screen and (width <= 768px) {
+  @media screen and (max-width: 768px) {
     width: 100%;
     padding: 16px;
     margin-inline: 20px;
@@ -42,7 +42,7 @@ const CardHead = styled.h3`
   font-weight: 600;
   color: ${props => props.theme.colors.dark_blue};
   margin-block: 0px;
-  @media screen and (width <= 768px) {
+  @media screen and (max-width: 768px) {
     font-size: 16px;
   }
 `;
@@ -51,7 +51,7 @@ const Description = styled.p`
   color: ${props => props.theme.colors.gray};
   font-size: 16px;
   line-height: 150%;
-  @media screen and (width <= 768px) {
+  @media screen and (max-width: 768px) {
     font-size: 12px;
   }
 `;
@@ -62,7 +62,7 @@ const Price = styled.h2`
   font-weight: 600;
   margin-block: 0px;
 
-  @media screen and (width <= 768px) {
+  @media screen and (max-width: 768px) {
     font-size: 20px;
     display: inline;
   }
@@ -74,7 +74,7 @@ const PriceDes = styled.h4`
   font-weight: 500;
   margin-block: 0px 10px;
 
-  @media screen and (width <= 768px) {
+  @media screen and (max-width: 768px) {
     margin-left: 10px;
     font-size: 12px;
     display: inline;
@@ -85,7 +85,7 @@ const Divider = styled.hr`
   border: 1px solid ${props => props.theme.colors.border};
   margin-block: 20px;
 
-  @media screen and (width <= 768px) {
+  @media screen and (max-width: 768px) {
     border: 2px solid ${props => props.theme.colors.border};
     margin-block: 16px;
   }
@@ -109,7 +109,7 @@ const DetailContent = styled.span<DetailContentProps>`
   margin-left: 10px;
   font-size: 14px;
 
-  @media screen and (width <= 768px) {
+  @media screen and (max-width: 768px) {
     font-size: 12px;
     vertical-align: text-top;
   }
@@ -118,7 +118,7 @@ const DetailContent = styled.span<DetailContentProps>`
 const CheckMarkIcon = styled.img`
   width: 24px;
 
-  @media screen and (width <= 768px) {
+  @media screen and (max-width: 768px) {
     width: 18px;
   }
 `;

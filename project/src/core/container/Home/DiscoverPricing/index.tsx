@@ -37,7 +37,7 @@ const Container = styled.div`
   text-align: center;
   padding-bottom: 40px;
 
-  @media screen and (width <= 928px) {
+  @media screen and (max-width: 928px) {
     padding-bottom: 20px;
   }
 `;

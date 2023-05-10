@@ -27,7 +27,7 @@ const Container = styled.div`
 `;
 
 const Img = styled.img`
-  @media screen and (width <= 768px) {
+  @media screen and (max-width: 768px) {
     width: 50px;
     height: 50px;
   }
@@ -41,17 +41,17 @@ const Header = styled.h2`
   font-weight: 500;
   margin-bottom: -10px;
 
-  @media screen and (width <= 1200px) {
+  @media screen and (max-width: 1200px) {
     font-size: 40px;
     margin-left: -24px;
   }
 
-  @media screen and (width <= 920px) {
+  @media screen and (max-width: 920px) {
     font-size: 34px;
     margin-left: -20px;
   }
 
-  @media screen and (width <= 768px) {
+  @media screen and (max-width: 768px) {
     font-size: 20px;
     margin-left: -16px;
   }
@@ -67,7 +67,7 @@ const ServiceList = styled.ul`
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  @media screen and (width <= 768px) {
+  @media screen and (max-width: 768px) {
     gap: 10px;
   }
 `;

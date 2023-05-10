@@ -65,19 +65,19 @@ export default function Footer() {
 const FooterContainer = styled.footer`
   padding-inline: 14vw;
 
-  @media screen and (width <= 1440px) {
+  @media screen and (max-width: 1440px) {
     padding-inline: 10vw;
   }
 
-  @media screen and (width <= 1200px) {
+  @media screen and (max-width: 1200px) {
     padding-inline: 8vw;
   }
 
-  @media screen and (width <= 992px) {
+  @media screen and (max-width: 992px) {
     padding-inline: 6vw;
   }
 
-  @media screen and (width <= 768px) {
+  @media screen and (max-width: 768px) {
     padding-inline: 0px;
   }
 `;
@@ -93,7 +93,7 @@ const Container = styled.div`
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 
-  @media screen and (width <= 768px) {
+  @media screen and (max-width: 768px) {
     border-radius: 0px;
     padding: 12px;
     margin-bottom: 0px;
@@ -105,14 +105,14 @@ const Title = styled.h2`
   font-size: 36px;
   margin-block: 10px 25px;
   color: ${props => props.theme.colors.dark_blue};
-  @media screen and (width <= 768px) {
+  @media screen and (max-width: 768px) {
     font-size: 20px;
   }
 `;
 
 const Left = styled.div`
   padding-right: 100px;
-  @media screen and (width <= 768px) {
+  @media screen and (max-width: 768px) {
     padding-right: 0px;
     width: 100%;
     margin-bottom: 20px;
@@ -122,7 +122,7 @@ const Left = styled.div`
 const Form = styled.form`
   width: 100%;
 
-  @media screen and (width <= 768px) {
+  @media screen and (max-width: 768px) {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -135,7 +135,7 @@ const CustomInput = styled(Input)`
   display: block;
   margin-block: 15px;
 
-  @media screen and (width <= 768px) {
+  @media screen and (max-width: 768px) {
     width: 100%;
     margin-block: 6px;
   }
@@ -143,7 +143,7 @@ const CustomInput = styled(Input)`
 
 const CustomButton = styled(Button)`
   width: 100%;
-  @media screen and (width <= 768px) {
+  @media screen and (max-width: 768px) {
     margin-block: 6px;
   }
 `;
@@ -164,7 +164,7 @@ const Right = styled.div`
   -ms-flex-positive: 1;
   flex-grow: 1;
   gap: 50px;
-  @media screen and (width <= 768px) {
+  @media screen and (max-width: 768px) {
     margin-left: 0px;
     gap: 30px;
   }
@@ -185,7 +185,7 @@ const ContactItemContent = styled.span`
   margin-left: 20px;
   font-size: 18px;
   color: ${props => props.theme.colors.gray};
-  @media screen and (width <= 768px) {
+  @media screen and (max-width: 768px) {
     font-size: 12px;
   }
 `;
@@ -226,7 +226,7 @@ const ListItem = styled.li`
   color: ${props => props.theme.colors.dark_blue};
   font-weight: 500;
 
-  @media screen and (width <= 768px) {
+  @media screen and (max-width: 768px) {
     font-size: 14px;
   }
 `;
@@ -236,7 +236,7 @@ const CopyRight = styled.span`
   font-weight: 400;
   color: ${props => props.theme.colors.gray};
 
-  @media screen and (width <= 768px) {
+  @media screen and (max-width: 768px) {
     font-size: 10px;
   }
 `;

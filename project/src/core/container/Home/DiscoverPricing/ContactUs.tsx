@@ -29,7 +29,7 @@ const Container = styled.div`
   -ms-flex-align: center;
   align-items: center;
   padding-block: 100px 10px;
-  @media screen and (width <= 768px) {
+  @media screen and (max-width: 768px) {
     text-align: left;
     display: block;
     padding-top: 30px;
@@ -41,15 +41,15 @@ const Title = styled.h2`
   color: ${props => props.theme.colors.dark_blue};
   font-weight: 600;
 
-  @media screen and (width <= 1440px) {
+  @media screen and (max-width: 1440px) {
     font-size: 28px;
   }
 
-  @media screen and (width <= 1200px) {
+  @media screen and (max-width: 1200px) {
     font-size: 24px;
   }
 
-  @media screen and (width <= 768px) {
+  @media screen and (max-width: 768px) {
     font-size: 20px;
   }
 `;
@@ -63,7 +63,7 @@ const Form = styled.form`
   -ms-flex-pack: center;
   justify-content: center;
 
-  @media screen and (width <= 768px) {
+  @media screen and (max-width: 768px) {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -72,13 +72,13 @@ const Form = styled.form`
 `;
 
 const ButtonContainer = styled.div`
-  @media screen and (width <= 768px) {
+  @media screen and (max-width: 768px) {
     width: 100%;
   }
 `;
 
 const CustomButton = styled(Button)`
-  @media screen and (width <= 768px) {
+  @media screen and (max-width: 768px) {
     width: 100%;
   }
 `;

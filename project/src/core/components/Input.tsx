@@ -31,7 +31,7 @@ const StyleInput = styled.input<StyleInputProps>`
     color: rgba(11, 7, 87, 0.2);
   }
 
-  @media screen and (width <= 768px) {
+  @media screen and (max-width: 768px) {
     display: block;
     width: 100%;
   }

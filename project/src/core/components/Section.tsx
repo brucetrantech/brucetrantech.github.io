@@ -29,19 +29,19 @@ const Container = styled.section<ContainerProps>`
   padding-inline: 14vw;
   ${props => props.background && `background: ${props.background}`};
 
-  @media screen and (width <= 1440px) {
+  @media screen and (max-width: 1440px) {
     padding-inline: 10vw;
   }
 
-  @media screen and (width <= 1200px) {
+  @media screen and (max-width: 1200px) {
     padding-inline: 8vw;
   }
 
-  @media screen and (width <= 992px) {
+  @media screen and (max-width: 992px) {
     padding-inline: 6vw;
   }
 
-  @media screen and (width <= 768px) {
+  @media screen and (max-width: 768px) {
     padding-inline: ${props => (props.paddingSmall ? '10px' : '0px')};
   }
 `;
