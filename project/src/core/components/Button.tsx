@@ -76,9 +76,12 @@ const StyleBtn = styled.button<StyleBtnProps>`
   font-weight: ${props => props.fontWeight};
   font-size: ${props => `${props.fontSize}px`};
   transition: 1s ease-out;
+  -webkit-transition: 1s ease-out;
+  -o-transition: 1s ease-out;
 
   &:hover {
     filter: brightness(88%);
+    -webkit-filter: brightness(88%);
   }
 
   ${props =>

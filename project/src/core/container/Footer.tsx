@@ -83,11 +83,14 @@ const FooterContainer = styled.footer`
 `;
 
 const Container = styled.div`
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   background-color: #e7f5ff;
   padding: 20px 40px 40px 40px;
   border-radius: 30px;
   margin-bottom: 100px;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 
   @media screen and (width <= 768px) {
@@ -120,7 +123,10 @@ const Form = styled.form`
   width: 100%;
 
   @media screen and (width <= 768px) {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
   }
 `;
@@ -144,9 +150,18 @@ const CustomButton = styled(Button)`
 
 const Right = styled.div`
   margin-left: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
   flex-grow: 1;
   gap: 50px;
   @media screen and (width <= 768px) {
@@ -156,6 +171,8 @@ const Right = styled.div`
 `;
 
 const ListSocial = styled.ul`
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   gap: 20px;
 `;
@@ -177,12 +194,18 @@ const MainContact = styled.div``;
 
 const SubContact = styled.div`
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
 `;
 
 const Logo = styled.img`
   cursor: pointer;
+  -ms-flex-item-align: end;
+  -ms-grid-row-align: end;
   align-self: end;
 
   @media screen and (max-width: 768px) {
@@ -191,6 +214,8 @@ const Logo = styled.img`
 `;
 
 const List = styled.ul`
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   gap: 20px;
   margin-block: 10px;

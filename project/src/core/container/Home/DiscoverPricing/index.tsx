@@ -43,10 +43,14 @@ const Container = styled.div`
 `;
 
 const PriceList = styled.ul`
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  display: flex;
+  -webkit-box-pack: space-evenly;
+  -ms-flex-pack: space-evenly;
   justify-content: space-evenly;
   gap: 15px;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   margin-top: 20px;
 `;

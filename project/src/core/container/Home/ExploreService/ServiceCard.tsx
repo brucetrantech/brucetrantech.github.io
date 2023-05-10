@@ -16,11 +16,16 @@ export default function ServiceCard({ icon, text }: ServiceCardProps) {
 
 const Card = styled.div`
   border-radius: 15px;
+  -webkit-box-shadow: 0px 25px 47px rgba(0, 0, 0, 0.05);
   box-shadow: 0px 25px 47px rgba(0, 0, 0, 0.05);
   border: 1px solid #e5f1ff;
   background: white;
   padding: 30px 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   margin-block: 20px;
   width: 25vw;

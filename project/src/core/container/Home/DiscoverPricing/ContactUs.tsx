@@ -20,7 +20,13 @@ export default function ContactUs() {
 
 const Container = styled.div`
   display: flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   padding-block: 100px 10px;
   @media screen and (width <= 768px) {
@@ -51,10 +57,15 @@ const Title = styled.h2`
 const Form = styled.form`
   display: flex;
   gap: 20px;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
 
   @media screen and (width <= 768px) {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     text-align: center;
   }

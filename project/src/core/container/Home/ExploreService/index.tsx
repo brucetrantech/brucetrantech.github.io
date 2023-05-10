@@ -58,9 +58,14 @@ const Header = styled.h2`
 `;
 
 const ServiceList = styled.ul`
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   gap: 20px;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
   @media screen and (width <= 768px) {
     gap: 10px;

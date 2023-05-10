@@ -37,8 +37,14 @@ export default function Menu() {
 }
 
 const Header = styled.header`
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   padding-block: 18px;
 
@@ -56,7 +62,11 @@ const Logo = styled.img`
 `;
 
 const List = styled.ul`
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   gap: 5vw;
 

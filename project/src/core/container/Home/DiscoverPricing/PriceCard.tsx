@@ -93,6 +93,8 @@ const Divider = styled.hr`
 
 const DetailItem = styled.li`
   margin-block: 10px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 `;
 

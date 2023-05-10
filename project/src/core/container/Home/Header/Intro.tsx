@@ -37,13 +37,20 @@ export default function Intro() {
 }
 
 const Container = styled.div`
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   @media screen and (width <= 768px) {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: row wrap;
     flex-flow: row wrap;
   }
 `;
 
 const Content = styled.div`
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
   flex-grow: 1;
   width: 40vw;
   margin-block: 70px;
@@ -53,6 +60,8 @@ const Content = styled.div`
   }
 
   @media screen and (width <= 768px) {
+    -webkit-box-ordinal-group: 3;
+    -ms-flex-order: 2;
     order: 2;
     -webkit-order: 2;
     width: 100%;
@@ -106,6 +115,8 @@ const SubTitle = styled.h3`
 const ImgContainer = styled.div`
   width: 50vw;
   @media screen and (width <= 768px) {
+    -webkit-box-ordinal-group: 2;
+    -ms-flex-order: 1;
     order: 1;
     -webkit-order: 1;
     width: 100%;
