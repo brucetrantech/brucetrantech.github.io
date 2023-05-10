@@ -7,7 +7,10 @@ import ContactUs from './ContactUs';
 
 export default function DiscoverPricing() {
   return (
-    <Section background='linear-gradient(359.64deg, #F0F4FF 0.29%, rgba(242, 245, 255, 0) 103.06%);'>
+    <Section
+      id='discover'
+      background='linear-gradient(359.64deg, #F0F4FF 0.29%, rgba(242, 245, 255, 0) 103.06%);'
+    >
       <Container>
         <Button
           radius='lg'
@@ -32,15 +35,18 @@ export default function DiscoverPricing() {
 
 const Container = styled.div`
   text-align: center;
-  padding-bottom: 100px;
+  padding-bottom: 40px;
+
+  @media screen and (width <= 928px) {
+    padding-bottom: 20px;
+  }
 `;
 
 const PriceList = styled.ul`
   display: flex;
-  list-style-type: none;
   display: flex;
   justify-content: space-evenly;
   gap: 15px;
   flex-wrap: wrap;
-  padding-inline-start: 0px;
+  margin-top: 20px;
 `;

@@ -33,5 +33,6 @@ const StyleInput = styled.input<StyleInputProps>`
 
   @media screen and (width <= 768px) {
     display: block;
+    width: 100%;
   }
 `;

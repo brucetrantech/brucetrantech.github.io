@@ -14,15 +14,17 @@ export default function Intro() {
           Get something better together, you have a best business, we make sure the best
           infrastructure for you
         </SubTitle>
-        <Button
-          color='white'
-          padding='18px 26px'
-          fontSize={18}
-          fontWeight={600}
-          small={{ fontSize: 12, fontWeight: 500, padding: '11px 78px' }}
-        >
-          Contact us
-        </Button>
+        <a href='#contact'>
+          <Button
+            color='white'
+            padding='18px 26px'
+            fontSize={18}
+            fontWeight={600}
+            small={{ fontSize: 12, fontWeight: 500, padding: '11px 78px' }}
+          >
+            Contact us
+          </Button>
+        </a>
       </Content>
       <ImgContainer>
         <Img
@@ -45,8 +47,14 @@ const Content = styled.div`
   flex-grow: 1;
   width: 40vw;
   margin-block: 70px;
+
+  @media screen and (width <= 992px) {
+    margin-block: 30px;
+  }
+
   @media screen and (width <= 768px) {
     order: 2;
+    -webkit-order: 2;
     width: 100%;
     text-align: center;
     margin-block: 10px;
@@ -59,6 +67,18 @@ const Title = styled.h1`
   font-weight: 600;
   line-height: 120%;
   margin-block: 20px;
+
+  @media screen and (width <= 1440px) {
+    font-size: 40px;
+  }
+
+  @media screen and (width <= 1200px) {
+    font-size: 36px;
+  }
+
+  @media screen and (width <= 992px) {
+    font-size: 32px;
+  }
 
   @media screen and (width <= 768px) {
     font-size: 20px;
@@ -73,6 +93,11 @@ const SubTitle = styled.h3`
   opacity: 0.7;
   color: ${props => props.theme.colors.gray};
   margin-block: 0 20px;
+
+  @media screen and (width <= 1200px) {
+    font-size: 14px;
+  }
+
   @media screen and (width <= 768px) {
     font-size: 12px;
   }
@@ -82,6 +107,7 @@ const ImgContainer = styled.div`
   width: 50vw;
   @media screen and (width <= 768px) {
     order: 1;
+    -webkit-order: 1;
     width: 100%;
     text-align: center;
   }

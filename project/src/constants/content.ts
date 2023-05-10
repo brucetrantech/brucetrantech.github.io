@@ -4,6 +4,16 @@ import JenkinLogo from '../public/full/JenkinLogo.svg';
 import KubernetesLogo from '../public/full/KubernetesLogo.svg';
 import TerraformLogo from '../public/full/TerraformLogo.svg';
 
+import MVP from '../public/full/MVP.svg';
+import Infra from '../public/full/Infra.svg';
+import Micro from '../public/full/Microservice.svg';
+import Clustering from '../public/full/KubernetesClustering.svg';
+import CICD from '../public/full/CICD.svg';
+import Secure from '../public/full/Secure.svg';
+
+import { FaGoogle, FaInstagram, FaLinkedin, FaTwitter } from 'react-icons/fa';
+import { IconType } from 'react-icons';
+
 export const BRANCH_LIST = [
   {
     logo: GithubLogo,
@@ -112,3 +122,59 @@ export const PRICES = [
     ],
   },
 ] as Prices[];
+
+type ExploreService = {
+  icon: string;
+  text: string;
+};
+
+export const EXPLORE_SERVICES = [
+  {
+    icon: MVP,
+    text: 'Simple architecture for MVP',
+  },
+  {
+    icon: Infra,
+    text: 'Infrastructure as Code',
+  },
+  {
+    icon: Micro,
+    text: 'Microservice architecture',
+  },
+  {
+    icon: Clustering,
+    text: 'Kubernetes clustering',
+  },
+  {
+    icon: CICD,
+    text: 'CI/CD Pipelines',
+  },
+  {
+    icon: Secure,
+    text: 'Security Operations',
+  },
+] as ExploreService[];
+
+type Contact = {
+  icon: IconType;
+  link: string;
+};
+
+export const LIST_CONTACT = [
+  {
+    icon: FaGoogle,
+    link: '',
+  },
+  {
+    icon: FaTwitter,
+    link: '',
+  },
+  {
+    icon: FaInstagram,
+    link: '',
+  },
+  {
+    icon: FaLinkedin,
+    link: '',
+  },
+] as Contact[];

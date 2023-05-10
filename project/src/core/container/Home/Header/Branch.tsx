@@ -15,10 +15,8 @@ export default function Branch() {
 
 const List = styled.ul`
   margin-block: 20px;
-  list-style-type: none;
   display: flex;
   align-items: center;
-  padding-inline-start: 0px;
   flex-wrap: wrap;
   gap: 16px;
   justify-content: space-evenly;

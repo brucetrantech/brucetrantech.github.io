@@ -9,18 +9,26 @@ export default function Menu() {
 
       <nav>
         <List>
-          <ListItem>Effective</ListItem>
-          <ListItem>Pricing</ListItem>
-          <ListItem>Services</ListItem>
           <ListItem>
-            <Button
-              color='white'
-              padding='12px 32px'
-              fontSize={18}
-              small={{ fontSize: 12, fontWeight: 500, padding: '6px 9px' }}
-            >
-              Contact us
-            </Button>
+            <Anchor href='#'>Effective</Anchor>
+          </ListItem>
+          <ListItem>
+            <Anchor href='#discover'>Pricing</Anchor>
+          </ListItem>
+          <ListItem>
+            <Anchor href='#explore'>Services</Anchor>
+          </ListItem>
+          <ListItem>
+            <a href='#contact'>
+              <Button
+                color='white'
+                padding='12px 32px'
+                fontSize={18}
+                small={{ fontSize: 12, fontWeight: 500, padding: '6px 9px' }}
+              >
+                Contact us
+              </Button>
+            </a>
           </ListItem>
         </List>
       </nav>
@@ -48,11 +56,9 @@ const Logo = styled.img`
 `;
 
 const List = styled.ul`
-  list-style-type: none;
   display: flex;
   align-items: center;
   gap: 5vw;
-  padding-inline-start: 0px;
 
   @media screen and (max-width: 768px) {
     gap: 16px;
@@ -66,5 +72,13 @@ const ListItem = styled.li`
 
   @media screen and (max-width: 768px) {
     font-size: 12px;
+  }
+`;
+
+const Anchor = styled.a`
+  color: inherit;
+  &:hover,
+  &:focus {
+    color: inherit;
   }
 `;

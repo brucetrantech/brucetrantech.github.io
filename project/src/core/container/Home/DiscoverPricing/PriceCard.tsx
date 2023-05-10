@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { Prices } from '../../../../constants/content';
-import { CheckMarkIcon } from '../../../icons';
+// import { CheckMarkIcon } from '../../../icons';
+import checkMark from '../../../../public/full/Checkmark.svg';
 
 export default function PriceCard({ price }: { price: Prices }) {
   return (
@@ -10,14 +11,14 @@ export default function PriceCard({ price }: { price: Prices }) {
       <Price>$ {price.price}</Price>
       <PriceDes>{price.price_desc}</PriceDes>
       <Divider />
-      <Details>
+      <ul>
         {price.detail.map((item, k) => (
           <DetailItem key={k}>
-            <CheckMarkIcon />
+            <CheckMarkIcon src={checkMark} alt='check-mark' />
             <DetailContent highlight={!!item.highlight}>{item.content}</DetailContent>
           </DetailItem>
         ))}
-      </Details>
+      </ul>
     </Card>
   );
 }
@@ -27,7 +28,13 @@ const Card = styled.li`
   padding: 43px 39px;
   border: 2px solid ${props => props.theme.colors.border};
   text-align: left;
-  width: 300px;
+  width: 280px;
+  background-color: white;
+  @media screen and (width <= 768px) {
+    width: 100%;
+    padding: 16px;
+    margin-inline: 20px;
+  }
 `;
 
 const CardHead = styled.h3`
@@ -35,12 +42,18 @@ const CardHead = styled.h3`
   font-weight: 600;
   color: ${props => props.theme.colors.dark_blue};
   margin-block: 0px;
+  @media screen and (width <= 768px) {
+    font-size: 16px;
+  }
 `;
 
 const Description = styled.p`
   color: ${props => props.theme.colors.gray};
   font-size: 16px;
-  line-height: 188%;
+  line-height: 150%;
+  @media screen and (width <= 768px) {
+    font-size: 12px;
+  }
 `;
 
 const Price = styled.h2`
@@ -48,23 +61,34 @@ const Price = styled.h2`
   color: ${props => props.theme.colors.dark_blue};
   font-weight: 600;
   margin-block: 0px;
+
+  @media screen and (width <= 768px) {
+    font-size: 20px;
+    display: inline;
+  }
 `;
 
 const PriceDes = styled.h4`
   color: rgba(144, 147, 183, 0.59);
   font-size: 16px;
   font-weight: 500;
-  margin-block: 10px;
+  margin-block: 0px 10px;
+
+  @media screen and (width <= 768px) {
+    margin-left: 10px;
+    font-size: 12px;
+    display: inline;
+  }
 `;
 
 const Divider = styled.hr`
   border: 1px solid ${props => props.theme.colors.border};
   margin-block: 20px;
-`;
 
-const Details = styled.ul`
-  list-style-type: none;
-  padding-inline-start: 0px;
+  @media screen and (width <= 768px) {
+    border: 2px solid ${props => props.theme.colors.border};
+    margin-block: 16px;
+  }
 `;
 
 const DetailItem = styled.li`
@@ -82,4 +106,17 @@ const DetailContent = styled.span<DetailContentProps>`
   vertical-align: super;
   margin-left: 10px;
   font-size: 14px;
+
+  @media screen and (width <= 768px) {
+    font-size: 12px;
+    vertical-align: text-top;
+  }
+`;
+
+const CheckMarkIcon = styled.img`
+  width: 24px;
+
+  @media screen and (width <= 768px) {
+    width: 18px;
+  }
 `;

@@ -8,11 +8,11 @@ export default function ContactUs() {
       <Form>
         <Input placeholder='Enter your name or company' />
         <Input placeholder='Enter your phone or email' />
-        <div>
-          <Button radius='input' padding='13px 103px' fontSize={14} fontWeight={700}>
+        <ButtonContainer>
+          <CustomButton radius='input' padding='13px 103px' fontSize={14} fontWeight={700}>
             Submit
-          </Button>
-        </div>
+          </CustomButton>
+        </ButtonContainer>
       </Form>
     </Container>
   );
@@ -22,9 +22,11 @@ const Container = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-block: 25px;
+  padding-block: 100px 10px;
   @media screen and (width <= 768px) {
+    text-align: left;
     display: block;
+    padding-top: 30px;
   }
 `;
 
@@ -32,14 +34,40 @@ const Title = styled.h2`
   font-size: 36px;
   color: ${props => props.theme.colors.dark_blue};
   font-weight: 600;
+
+  @media screen and (width <= 1440px) {
+    font-size: 28px;
+  }
+
+  @media screen and (width <= 1200px) {
+    font-size: 24px;
+  }
+
+  @media screen and (width <= 768px) {
+    font-size: 20px;
+  }
 `;
 
 const Form = styled.form`
   display: flex;
   gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
 
   @media screen and (width <= 768px) {
-    display: block;
+    display: flex;
     text-align: center;
+  }
+`;
+
+const ButtonContainer = styled.div`
+  @media screen and (width <= 768px) {
+    width: 100%;
+  }
+`;
+
+const CustomButton = styled(Button)`
+  @media screen and (width <= 768px) {
+    width: 100%;
   }
 `;
