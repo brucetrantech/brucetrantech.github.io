@@ -11,6 +11,10 @@ import Clustering from '../public/full/KubernetesClustering.svg';
 import CICD from '../public/full/CICD.svg';
 import Secure from '../public/full/Secure.svg';
 
+import GrowBusiness from '../public/full/GrowBusiness.svg';
+import OptimizeCost from '../public/full/OptimizeCost.svg';
+import AccessTalents from '../public/full/AccessTalents.svg';
+
 import { FaGoogle, FaInstagram, FaLinkedin, FaTwitter } from 'react-icons/fa';
 import { IconType } from 'react-icons';
 
@@ -178,3 +182,31 @@ export const LIST_CONTACT = [
     link: '',
   },
 ] as Contact[];
+
+type Effective = {
+  icon: string;
+  title: string;
+  description: string;
+  star: 1 | 2 | 3;
+};
+
+export const EFFECTIVES = [
+  {
+    icon: GrowBusiness,
+    title: 'Grow Your Business',
+    description: 'Focusing on business how to grow the best profile',
+    star: 1,
+  },
+  {
+    icon: OptimizeCost,
+    title: 'Optimize your cost',
+    description: 'Improve and manage cost for infrastructure as well',
+    star: 2,
+  },
+  {
+    icon: AccessTalents,
+    title: 'Access to talents',
+    description: 'Can support, maintain and get faster deliveries with better quality',
+    star: 3,
+  },
+] as Effective[];

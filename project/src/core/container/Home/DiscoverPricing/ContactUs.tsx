@@ -63,6 +63,10 @@ const Form = styled.form`
   -ms-flex-pack: center;
   justify-content: center;
 
+  @media screen and (max-width: 920px) {
+    max-width: 600px;
+  }
+
   @media screen and (max-width: 768px) {
     display: -webkit-box;
     display: -ms-flexbox;
