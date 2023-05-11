@@ -12,7 +12,7 @@ export default function DiscoverPricing() {
       background='linear-gradient(359.64deg, #F0F4FF 0.29%, rgba(242, 245, 255, 0) 103.06%);'
     >
       <Container>
-        <Button
+        <CustomButton
           radius='lg'
           color='blue'
           bg='#E9EDFF'
@@ -21,7 +21,7 @@ export default function DiscoverPricing() {
           padding='8px 50px'
         >
           Discover Pricing
-        </Button>
+        </CustomButton>
         <PriceList>
           {PRICES.map(price => (
             <PriceCard price={price} key={price.type} />
@@ -53,4 +53,12 @@ const PriceList = styled.ul`
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   margin-top: 20px;
+`;
+
+const CustomButton = styled(Button)`
+  cursor: auto;
+
+  &:hover {
+    filter: brightness(100%);
+  }
 `;

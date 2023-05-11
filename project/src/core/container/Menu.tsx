@@ -10,7 +10,7 @@ export default function Menu() {
       <nav>
         <List>
           <ListItem>
-            <Anchor href='#'>Effective</Anchor>
+            <Anchor href='#solution'>Effective</Anchor>
           </ListItem>
           <ListItem>
             <Anchor href='#discover'>Pricing</Anchor>

@@ -6,7 +6,7 @@ import effective from '../../../../public/full/Effective.png';
 
 export default function Effective() {
   return (
-    <Section>
+    <Section id='solution'>
       <Container>
         <Content>
           <Title>Perfect Solution For Your Business</Title>

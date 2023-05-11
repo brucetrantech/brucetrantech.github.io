@@ -6,9 +6,9 @@ export default function Intro() {
   return (
     <Container>
       <Content>
-        <Button bg='light_blue' color='blue' radius='md' fontWeight={600} padding='10px 20px'>
+        <CustomButton bg='light_blue' color='blue' radius='md' fontWeight={600} padding='10px 20px'>
           Welcome GSBench
-        </Button>
+        </CustomButton>
         <Title>Make your business easily with the good and seamless infrastructure</Title>
         <SubTitle>
           Get something better together, you have a best business, we make sure the best
@@ -127,4 +127,12 @@ const ImgContainer = styled.div`
 const Img = styled.img`
   width: 100%;
   height: auto;
+`;
+
+const CustomButton = styled(Button)`
+  cursor: auto;
+
+  &:hover {
+    filter: brightness(100%);
+  }
 `;
