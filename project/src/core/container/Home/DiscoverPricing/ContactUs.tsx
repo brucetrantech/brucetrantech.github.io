@@ -1,16 +1,33 @@
 import styled from 'styled-components';
-import { Button, Input } from '../../../components';
+import { Button, Input, Loading } from '../../../components';
+import { useState } from 'react';
+import submit from '../../../../utils/form';
 
 export default function ContactUs() {
+  const [loading, setLoading] = useState(false);
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    setLoading(true);
+    submit(e, 'form-pricing', 'name-pricing', 'email-pricing').then(() => {
+      setLoading(false);
+    });
+  };
+
   return (
     <Container>
       <Title>Contact Us</Title>
-      <Form>
-        <Input placeholder='Enter your name or company' />
-        <Input placeholder='Enter your phone or email' />
+      <Form id='form-pricing' onSubmit={loading ? () => true : handleSubmit}>
+        <Input name='name' id='name-pricing' placeholder='Enter your name or company' />
+        <Input name='email' id='email-pricing' placeholder='Enter your phone or email' />
         <ButtonContainer>
-          <CustomButton radius='input' padding='13px 103px' fontSize={14} fontWeight={700}>
-            Submit
+          <CustomButton
+            radius='input'
+            padding='13px 103px'
+            fontSize={14}
+            fontWeight={700}
+            loading={loading}
+          >
+            {loading && <Loading />} Submit
           </CustomButton>
         </ButtonContainer>
       </Form>

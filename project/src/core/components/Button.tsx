@@ -18,6 +18,7 @@ type ButtonProps = {
     fontSize?: number;
     fontWeight?: number;
   };
+  loading?: boolean;
 } & React.HTMLAttributes<HTMLButtonElement>;
 
 interface StyleBtnProps {
@@ -32,6 +33,7 @@ interface StyleBtnProps {
   smallPadding?: string;
   smallFontSize?: number;
   smallFontWeight?: number;
+  loading?: boolean;
 }
 
 export default function Button({
@@ -78,6 +80,7 @@ const StyleBtn = styled.button<StyleBtnProps>`
   transition: 1s ease-out;
   -webkit-transition: 1s ease-out;
   -o-transition: 1s ease-out;
+  ${props => props.loading && 'cursor: wait;'}
 
   &:hover {
     filter: brightness(88%);

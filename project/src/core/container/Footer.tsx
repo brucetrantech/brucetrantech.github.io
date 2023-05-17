@@ -2,8 +2,10 @@ import styled from 'styled-components';
 import { IconType } from 'react-icons';
 import { FaMapMarkerAlt, FaPhoneAlt, FaRegEnvelope } from 'react-icons/fa';
 import logo from '../../public/full/gsbench-logo.svg';
-import { Button, Input } from '../components';
+import { Button, Input, Loading } from '../components';
 import { LIST_CONTACT } from '../../constants/content';
+import { useState } from 'react';
+import submit from '../../utils/form';
 
 function ContactItem({ Icon, content }: { Icon: IconType; content: string }) {
   return (
@@ -15,16 +17,24 @@ function ContactItem({ Icon, content }: { Icon: IconType; content: string }) {
 }
 
 export default function Footer() {
+  const [loading, setLoading] = useState(false);
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    setLoading(true);
+    submit(e, 'form-footer', 'name-footer', 'email-footer').then(() => {
+      setLoading(false);
+    });
+  };
+
   return (
     <FooterContainer id='contact'>
       <Container>
         <Left>
           <Title>Contact Us</Title>
-          <Form>
-            <CustomInput placeholder='Enter your name or company' />
-            <CustomInput placeholder='Enter your phone or email' />
-            <CustomButton radius={50} padding='12px 100px'>
-              Submit
+          <Form onSubmit={loading ? () => true : handleSubmit} id='form-footer'>
+            <CustomInput name='name' id='name-footer' placeholder='Enter your name or company' />
+            <CustomInput name='email' id='email-footer' placeholder='Enter your phone or email' />
+            <CustomButton loading={loading} radius={50} padding='12px 100px'>
+              {loading && <Loading />} Submit
             </CustomButton>
           </Form>
         </Left>

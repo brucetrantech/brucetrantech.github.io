@@ -5,14 +5,16 @@ type Radius = 'sm' | 'md' | 'lg' | 'xl' | 'xxl' | 'input' | number;
 
 type InputProps = {
   radius?: Radius;
+  name?: string;
+  required?: boolean;
 } & React.HTMLAttributes<HTMLInputElement>;
 
 interface StyleInputProps {
   radius: Radius;
 }
 
-export default function Input({ radius = 'input', ...props }: InputProps) {
-  return <StyleInput radius={radius} {...props} />;
+export default function Input({ radius = 'input', name, required = true, ...props }: InputProps) {
+  return <StyleInput required={required} radius={radius} name={name} {...props} />;
 }
 
 const StyleInput = styled.input<StyleInputProps>`
