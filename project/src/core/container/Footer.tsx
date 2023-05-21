@@ -4,8 +4,9 @@ import { FaMapMarkerAlt, FaPhoneAlt, FaRegEnvelope } from 'react-icons/fa';
 import logo from '../../public/full/gsbench-logo.svg';
 import { Button, Input, Loading } from '../components';
 import { LIST_CONTACT } from '../../constants/content';
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import submit from '../../utils/form';
+import { NotificationContext } from '../components/Notification';
 
 function ContactItem({ Icon, content }: { Icon: IconType; content: string }) {
   return (
@@ -17,12 +18,24 @@ function ContactItem({ Icon, content }: { Icon: IconType; content: string }) {
 }
 
 export default function Footer() {
+  const { setSuccess, updateShow, setContent } = useContext(NotificationContext);
+
   const [loading, setLoading] = useState(false);
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     setLoading(true);
-    submit(e, 'form-footer', 'name-footer', 'email-footer').then(() => {
-      setLoading(false);
-    });
+    submit(e, 'form-footer', 'name-footer', 'email-footer')
+      .then(() => {
+        setLoading(false);
+        updateShow();
+        setSuccess(true);
+        setContent('Cảm ơn bạn. Chúng tôi sẽ liên hệ với bạn sớm.');
+      })
+      .catch(() => {
+        setLoading(false);
+        updateShow();
+        setSuccess(false);
+        setContent('Rất tiếc! Có lỗi xảy ra, vui lòng thử lại sau.');
+      });
   };
 
   return (

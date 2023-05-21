@@ -6,7 +6,7 @@ import ServiceCard from './ServiceCard';
 
 export default function ExploreService() {
   return (
-    <Section id='explore'>
+    <Section id='services'>
       <Container>
         <div>
           <Img src={blockQuote} alt='block-quote' />

@@ -10,13 +10,13 @@ export default function Menu() {
       <nav>
         <List>
           <ListItem>
-            <Anchor href='#solution'>Effective</Anchor>
+            <Anchor href='#effective'>Effective</Anchor>
           </ListItem>
           <ListItem>
-            <Anchor href='#discover'>Pricing</Anchor>
+            <Anchor href='#pricing'>Pricing</Anchor>
           </ListItem>
           <ListItem>
-            <Anchor href='#explore'>Services</Anchor>
+            <Anchor href='#services'>Services</Anchor>
           </ListItem>
           <ListItem>
             <a href='#contact'>

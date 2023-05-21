@@ -1,16 +1,28 @@
 import styled from 'styled-components';
 import { Button, Input, Loading } from '../../../components';
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import submit from '../../../../utils/form';
+import { NotificationContext } from '../../../components/Notification';
 
 export default function ContactUs() {
+  const { setSuccess, updateShow, setContent } = useContext(NotificationContext);
   const [loading, setLoading] = useState(false);
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     setLoading(true);
-    submit(e, 'form-pricing', 'name-pricing', 'email-pricing').then(() => {
-      setLoading(false);
-    });
+    submit(e, 'form-footer', 'name-footer', 'email-footer')
+      .then(() => {
+        setLoading(false);
+        updateShow();
+        setSuccess(true);
+        setContent('Cảm ơn bạn. Chúng tôi sẽ liên hệ với bạn sớm.');
+      })
+      .catch(() => {
+        setLoading(false);
+        updateShow();
+        setSuccess(false);
+        setContent('Rất tiếc! Có lỗi xảy ra, vui lòng thử lại sau.');
+      });
   };
 
   return (

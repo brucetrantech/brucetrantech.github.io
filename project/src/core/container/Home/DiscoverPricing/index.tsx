@@ -8,7 +8,7 @@ import ContactUs from './ContactUs';
 export default function DiscoverPricing() {
   return (
     <Section
-      id='discover'
+      id='pricing'
       background='linear-gradient(359.64deg, #F0F4FF 0.29%, rgba(242, 245, 255, 0) 103.06%);'
     >
       <Container>
