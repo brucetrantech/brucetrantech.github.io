@@ -8,8 +8,8 @@ export default function PriceCard({ price }: { price: Prices }) {
     <Card>
       <CardHead>{price.type}</CardHead>
       <Description>{price.description}</Description>
-      <Price>$ {price.price}</Price>
-      <PriceDes>{price.price_desc}</PriceDes>
+      {/* <Price>$ {price.price}</Price>
+      <PriceDes>{price.price_desc}</PriceDes> */}
       <Divider />
       <ul>
         {price.detail.map((item, k) => (
@@ -30,6 +30,12 @@ const Card = styled.li`
   text-align: left;
   width: 280px;
   background-color: white;
+
+  @media screen and (max-width: 992px) {
+    width: 250px;
+    margin-inline: 6px;
+  }
+
   @media screen and (max-width: 768px) {
     width: 100%;
     padding: 16px;
@@ -56,30 +62,30 @@ const Description = styled.p`
   }
 `;
 
-const Price = styled.h2`
-  font-size: 42px;
-  color: ${props => props.theme.colors.dark_blue};
-  font-weight: 600;
-  margin-block: 0px;
+// const Price = styled.h2`
+//   font-size: 42px;
+//   color: ${props => props.theme.colors.dark_blue};
+//   font-weight: 600;
+//   margin-block: 0px;
 
-  @media screen and (max-width: 768px) {
-    font-size: 20px;
-    display: inline;
-  }
-`;
+//   @media screen and (max-width: 768px) {
+//     font-size: 20px;
+//     display: inline;
+//   }
+// `;
 
-const PriceDes = styled.h4`
-  color: rgba(144, 147, 183, 0.59);
-  font-size: 16px;
-  font-weight: 500;
-  margin-block: 0px 10px;
+// const PriceDes = styled.h4`
+//   color: rgba(144, 147, 183, 0.59);
+//   font-size: 16px;
+//   font-weight: 500;
+//   margin-block: 0px 10px;
 
-  @media screen and (max-width: 768px) {
-    margin-left: 10px;
-    font-size: 12px;
-    display: inline;
-  }
-`;
+//   @media screen and (max-width: 768px) {
+//     margin-left: 10px;
+//     font-size: 12px;
+//     display: inline;
+//   }
+// `;
 
 const Divider = styled.hr`
   border: 1px solid ${props => props.theme.colors.border};

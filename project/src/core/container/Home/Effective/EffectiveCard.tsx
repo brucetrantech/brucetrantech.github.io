@@ -50,6 +50,9 @@ const Card = styled.div`
     width: 148px;
     padding: 11px 10px;
   }
+  @media screen and (max-width: 360px) {
+    width: 135px;
+  }
 `;
 
 const Img = styled.img`

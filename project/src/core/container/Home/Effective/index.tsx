@@ -77,6 +77,11 @@ const EffectiveList = styled.div`
   @media screen and (max-width: 768px) {
     width: 100%;
     gap: 10px;
+    margin-left: 40px;
+  }
+
+  @media screen and (max-width: 540px) {
+    margin-left: 0px;
   }
 `;
 
@@ -137,7 +142,16 @@ const ImgContainer = styled.div`
   }
 
   @media screen and (max-width: 992px) {
-    margin-left: 0px;
+    display: flex;
+    justify-content: right;
+    margin-top: -130px;
+  }
+
+  @media screen and (max-width: 820px) {
+    margin-top: -220px;
+  }
+
+  @media screen and (max-width: 540px) {
     margin-top: -130px;
   }
 `;
@@ -146,11 +160,14 @@ const Img = styled.img`
   width: 100%;
   height: auto;
   max-width: 100vw;
+  @media screen and (max-width: 992px) {
+    width: 75vw;
+  }
 `;
 
 const CardContainer1 = styled.div`
   width: 100%;
-  margin-left: 160px;
+  margin-left: 140px;
   z-index: 3;
 
   @media screen and (max-width: 992px) {
@@ -174,7 +191,7 @@ const CardContainer2 = styled.div`
 
 const CardContainer3 = styled.div`
   margin-top: -220px;
-  margin-left: 100px;
+  margin-left: 60px;
   z-index: 2;
 
   @media screen and (max-width: 1200px) {
@@ -184,6 +201,10 @@ const CardContainer3 = styled.div`
   @media screen and (max-width: 992px) {
     margin-top: 0px;
     margin-left: 0px;
+  }
+
+  @media screen and (max-width: 820px) {
+    width: 100%;
   }
 `;
 

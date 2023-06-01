@@ -4,8 +4,8 @@ import { Button } from '../components';
 
 export default function Menu() {
   return (
-    <Header>
-      <Logo src={logo} alt='GSBench' />
+    <Header id='header'>
+      <Logo src={logo} alt='GSBench' id='logo' />
 
       <nav>
         <List>

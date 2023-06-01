@@ -2,12 +2,12 @@ import { DiscoverPricing, Effective, ExploreService, Footer, Header } from '../c
 
 export default function Home() {
   return (
-    <>
+    <main>
       <Header />
       <Effective />
       <DiscoverPricing />
       <ExploreService />
       <Footer />
-    </>
+    </main>
   );
 }

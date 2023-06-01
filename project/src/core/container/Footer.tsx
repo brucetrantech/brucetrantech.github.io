@@ -70,14 +70,22 @@ export default function Footer() {
             <div>
               <nav>
                 <List>
-                  <ListItem>Company</ListItem>
-                  <ListItem>Services</ListItem>
-                  <ListItem>Pricing</ListItem>
+                  <ListItem>
+                    <Link href='#header'>Company</Link>
+                  </ListItem>
+                  <ListItem>
+                    <Link href='#services'>Services</Link>
+                  </ListItem>
+                  <ListItem>
+                    <Link href='#pricing'>Pricing</Link>
+                  </ListItem>
                 </List>
               </nav>
               <CopyRight>Copyright ©2023 GSBench. All Rights Reserved</CopyRight>
             </div>
-            <Logo src={logo} alt='GSBench' />
+            <Link href='#header'>
+              <Logo src={logo} alt='GSBench' />
+            </Link>
           </SubContact>
         </Right>
       </Container>
@@ -88,13 +96,13 @@ export default function Footer() {
 const FooterContainer = styled.footer`
   padding-inline: 14vw;
 
-  @media screen and (max-width: 1440px) {
-    padding-inline: 10vw;
-  }
-
-  @media screen and (max-width: 1200px) {
+  @media screen and (max-width: 1570px) {
     padding-inline: 8vw;
   }
+
+  /* @media screen and (max-width: 1200px) {
+    padding-inline: 8vw;
+  } */
 
   @media screen and (max-width: 992px) {
     padding-inline: 6vw;
@@ -157,6 +165,7 @@ const Form = styled.form`
 const CustomInput = styled(Input)`
   display: block;
   margin-block: 15px;
+  width: auto;
 
   @media screen and (max-width: 768px) {
     width: 100%;
@@ -262,4 +271,9 @@ const CopyRight = styled.span`
   @media screen and (max-width: 768px) {
     font-size: 10px;
   }
+`;
+
+const Link = styled.a`
+  color: inherit;
+  font-size: inherit;
 `;

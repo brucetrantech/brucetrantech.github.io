@@ -29,8 +29,8 @@ export default function ContactUs() {
     <Container>
       <Title>Contact Us</Title>
       <Form id='form-pricing' onSubmit={loading ? () => true : handleSubmit}>
-        <Input name='name' id='name-pricing' placeholder='Enter your name or company' />
-        <Input name='email' id='email-pricing' placeholder='Enter your phone or email' />
+        <CustomInput name='name' id='name-pricing' placeholder='Enter your name or company' />
+        <CustomInput name='email' id='email-pricing' placeholder='Enter your phone or email' />
         <ButtonContainer>
           <CustomButton
             radius='input'
@@ -111,6 +111,18 @@ const ButtonContainer = styled.div`
 `;
 
 const CustomButton = styled(Button)`
+  @media screen and (max-width: 768px) {
+    width: 100%;
+  }
+`;
+
+const CustomInput = styled(Input)`
+  width: auto;
+
+  @media screen and (max-width: 1570px) {
+    width: 220px;
+  }
+
   @media screen and (max-width: 768px) {
     width: 100%;
   }

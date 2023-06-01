@@ -17,10 +17,9 @@ export default function Intro() {
         <a href='#contact'>
           <Button
             color='white'
-            padding='18px 26px'
+            padding='12px 32px'
             fontSize={18}
-            fontWeight={600}
-            small={{ fontSize: 12, fontWeight: 500, padding: '11px 78px' }}
+            small={{ fontSize: 12, fontWeight: 500, padding: '6px 9px' }}
           >
             Contact us
           </Button>
