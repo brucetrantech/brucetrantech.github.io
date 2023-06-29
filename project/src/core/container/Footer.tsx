@@ -165,10 +165,11 @@ const Form = styled.form`
 const CustomInput = styled(Input)`
   display: block;
   margin-block: 15px;
-  width: auto;
+  width: 100%;
+  box-sizing: border-box;
+  height: 48px;
 
   @media screen and (max-width: 768px) {
-    width: 100%;
     margin-block: 6px;
   }
 `;
