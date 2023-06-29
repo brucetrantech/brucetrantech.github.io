@@ -1,5 +1,6 @@
 import { initializeApp } from 'firebase/app';
 import { getDatabase } from 'firebase/database';
+import { d } from '../utils/helper';
 
 const {
   VITE_APP_DB_URL,
@@ -10,11 +11,11 @@ const {
 } = import.meta.env;
 
 const firebaseConfig = {
-  apiKey: VITE_APP_FIREBASE_API_KEY,
-  authDomain: VITE_APP_FIREBASE_AUTH_DOMAIN,
-  projectId: VITE_APP_FIREBASE_PROJECT_ID,
-  appId: VITE_APP_FIREBASE_APP_ID,
-  databaseURL: VITE_APP_DB_URL,
+  apiKey: d(VITE_APP_FIREBASE_API_KEY, 5),
+  authDomain: d(VITE_APP_FIREBASE_AUTH_DOMAIN, 4),
+  projectId: d(VITE_APP_FIREBASE_PROJECT_ID, 7),
+  appId: d(VITE_APP_FIREBASE_APP_ID, 8),
+  databaseURL: d(VITE_APP_DB_URL, 3),
 };
 
 const app = initializeApp(firebaseConfig);

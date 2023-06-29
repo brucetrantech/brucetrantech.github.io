@@ -10,7 +10,7 @@ export default function ContactUs() {
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     setLoading(true);
-    submit(e, 'form-footer', 'name-footer', 'email-footer')
+    submit(e, 'form-pricing', 'name-pricing', 'email-pricing')
       .then(() => {
         setLoading(false);
         updateShow();
